@@ -18,9 +18,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class StudentsController implements Initializable {
+public class StudentsController {
 
-    @FXML
+    /*@FXML
     private TableView<Student> tbData;
 
     @FXML
@@ -69,5 +69,5 @@ public class StudentsController implements Initializable {
 //
 //        }
 //    }
-
+*/
 }
