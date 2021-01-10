@@ -1,73 +1,66 @@
 package controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import model.Student;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class StudentsController {
 
-    /*@FXML
-    private TableView<Student> tbData;
+    @FXML
+    private ResourceBundle resources;
 
     @FXML
-    private TableColumn<Student, Integer> studentId;
+    private URL location;
 
     @FXML
-    private TableColumn<Student, String> firstName;
+    private TableView<?> tbData;
 
     @FXML
-    private TableColumn<Student, String> lastName;
+    private TableColumn<?, ?> studentId;
 
-    public StudentsController() {
+    @FXML
+    private TableColumn<?, ?> firstName;
+
+    @FXML
+    private TableColumn<?, ?> lastName;
+
+    @FXML
+    private Button btnWriteAllStudents;
+
+    @FXML
+    private Button btnReadAllStudents;
+
+    @FXML
+    private TextField txtStudentId;
+
+    @FXML
+    private TextField txtFirstName;
+
+    @FXML
+    private Button btnWriteStudent;
+
+    @FXML
+    void onClickMethod(ActionEvent event) {
+
     }
 
     @FXML
-    public void initialize(URL location, ResourceBundle resources) {
-
-        studentId.setCellValueFactory(new PropertyValueFactory<>("StudentId"));
-        firstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
-        lastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
-        tbData.setItems(studentsModels);
+    void initialize() {
+        btnWriteAllStudents.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                System.out.println("Hello");
+            }
+        });
     }
-
-    private ObservableList<Student> studentsModels = FXCollections.observableArrayList(
-            new Student(1, "Amos", "Chepchieng"),
-            new Student(2, "Amos", "Mors"),
-            new Student(3, "Amos", "Chepchieng"),
-            new Student(4, "Amos", "Mors")
-    );
-
-    private void loadStage(String fxml) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxml));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-//    @FXML
-//    private void handleButtonClicks(javafx.event.ActionEvent mouseEvent) {
-//        if (mouseEvent.getSource() == btnLoad) {
-//
-//        }
-//    }
-*/
 }
+
